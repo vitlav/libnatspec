@@ -1,3 +1,7 @@
+Actualize:
+* http://www.opennet.ru/openforum/vsluhforumID3/99309.html
+* http://www.calculate-linux.ru/boards/16/topics/26112
+
 /home/lav/Projects/git-alt/main/nagios-plugins/nagios-plugins/gl/localcharset.c
 
  - закоммитить примеры патчей
@@ -16,13 +20,12 @@ iconv_open( nl_langinfo(CODESET), "UTF-8" );
 		  Returns:
 		  the correct singular or plural for the selected language, depending on n
 		  
-* koi8-r *
+
 TODO:
 - добавить pkgconfig?
 - использовать в dict
 - нужно увеличить номер библиотеки? ввести тщательное экспортирование символов
 - исправить реализацию natspec_iconv* (переменную ucs2 и cd - пары)
-+ Функция перекодирования должна быть идентичной iconv
 - для mount iso9660 вместо iocharset=utf8 надо указывать просто utf8; вроде бред :)
 - в natspec добавить dlopen для libnatspechi (как в libwine-etersoft)
 - cunit для тестирования функций?
@@ -50,27 +53,3 @@ TODO:
 ? Добавить --with-debug в configure (чтобы оно добавляло в config.h и -g в CFLAGS
 - Что у нас с многопоточностью?
 - проверять наличие некоторых крайних локалей (вдруг в тестовой системе не все)
-
-DONE:
-- научиться автоматически заполнять ChangeLog
-- fix patch for mount/submount
-- add patch for smbmount
-- написать нормальный m4 для упрощения конфигурирования NATSPEC (см. /usr/share/aclocal)
-- что происходит, если нет вызываемой функции?
-- красивый пример с использованием PKGCONFIG
-- 2PV: libnatspec.pc, natspec.m4 сделать с .in
-- 2PV: если нет python, и Make для него делать не надо
-from(pv): пока сделал по простому - в src/Makefile включается/отключается каталог python
-
-- 2PV: popt в configure сделать необязательным
-from(pv): сделал. Но без него не компилируется natspec.c
-from(pv): без libpopt оказывается НЕ РАБОТАЮТ ДАЖЕ rpm и apt. Так что надо подумать, стоит ли отказываться...
-
-- 2PV: нужна проверка на iconv - iconv.h и библиотеку
-from(pv): пока сделал блокирующую проверку на iconv.h
-
-- 2PV: обновить configure.am под новые использованные функции
-from(pv): сделал при помощи autoscan, исключив каталоги tests и examples
-
-- сделано через configure: читать системную локаль из файла в зависимости от операционки
-  (как определить где мы компилируемся - autoconf?)
