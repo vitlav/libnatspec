@@ -97,7 +97,6 @@ diff -urN catpkt-1.0.orig/catpkt.c catpkt-1.0/catpkt.c
  	// now we have to define the size of pkt
  	if ( fseek( fname, 0, SEEK_END ) == -1 ) {
  		perror( "can't define pkt size" );
-Файлы catpkt-1.0.orig/catpkt.o и catpkt-1.0/catpkt.o различаются
 diff -urN catpkt-1.0.orig/dos2koi.c catpkt-1.0/dos2koi.c
 --- catpkt-1.0.orig/dos2koi.c	1999-04-03 21:13:36 +0300
 +++ catpkt-1.0/dos2koi.c	1970-01-01 03:00:00 +0300
